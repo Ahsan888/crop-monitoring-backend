@@ -1,0 +1,39 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Static files (will be generated in production)
+staticfiles/
+static/
+
+# Migrations (keep the __init__.py files)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Secret keys and sensitive data
+secrets.json
