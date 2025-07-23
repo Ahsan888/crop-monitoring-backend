@@ -132,11 +132,23 @@ AUTH_USER_MODEL = "monitor.User"
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://crop-monitoring-latest-fda621ofk-amsuper870-7505s-projects.vercel.app",
+    "https://crop-monitoring-latest.vercel.app",
+    "https://crop-monitoring-latest-mvm4jf7e1-amsuper870-7505s-projects.vercel.app",
     "https://*.vercel.app",  # Allow all Vercel domains
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # For development only - comment out in production
 # CORS_ALLOW_ALL_ORIGINS = True
