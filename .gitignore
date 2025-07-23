@@ -31,9 +31,5 @@ Thumbs.db
 staticfiles/
 static/
 
-# Migrations (keep the __init__.py files)
-*/migrations/*.py
-!*/migrations/__init__.py
-
 # Secret keys and sensitive data
 secrets.json
