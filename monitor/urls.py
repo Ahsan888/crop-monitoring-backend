@@ -12,5 +12,5 @@ urlpatterns = [
     path("user/profile/", user_profile, name="user-profile"),
     path("user/approval-status/", approval_status, name="approval-status"),
     path("sentinel/token/", get_sentinel_token, name="sentinel-token"),
-    path('health/', views.health_check, name='health_check'),
+    # path('health/', views.health_check, name='health_check'),
 ]

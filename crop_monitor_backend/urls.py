@@ -7,7 +7,7 @@ def health_check(request):
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('health/', health_check, name='health_check'),   # Add this line
+    # path('health/', health_check, name='health_check'),
     path("api/v1/", include("monitor.urls")),
     path("api/v1/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/v1/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
