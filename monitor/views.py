@@ -2,14 +2,20 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth import authenticate
 from django.db import transaction
-import json
-from .models import FieldSubmission, User
-from .serializers import UserSerializer, FieldSubmissionSerializer
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+import json
+import xml.etree.ElementTree as ET
+import re
 import requests
 import logging
+
+from .models import FieldSubmission, User
+from .serializers import UserSerializer, FieldSubmissionSerializer
 
 # Set up logging
 logger = logging.getLogger(__name__)
