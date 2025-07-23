@@ -14,6 +14,10 @@ import logging
 # Set up logging
 logger = logging.getLogger(__name__)
 
+@csrf_exempt
+def health_check(request):
+    return JsonResponse({"status": "healthy", "message": "Django app is running"})
+
 class SignupView(APIView):
     def post(self, request):
         """Handle complete signup with user account + field data"""
@@ -250,7 +254,7 @@ class SignupView(APIView):
         
         except Exception as e:
             print(f"❌ [KML_PARSER] Error parsing coordinates text: {str(e)}")
-            
+
 class UserFieldsView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
