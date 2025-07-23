@@ -380,6 +380,7 @@ def get_sentinel_token(request):
         }, status=500)
 
 @api_view(['GET'])
+@authentication_classes([JWTAuthentication])
 @permission_classes([permissions.IsAuthenticated])
 def user_profile(request):
     """Get current user profile information"""
@@ -405,6 +406,7 @@ def user_profile(request):
     })
 
 @api_view(['GET'])
+@authentication_classes([JWTAuthentication])
 @permission_classes([permissions.IsAuthenticated])
 def approval_status(request):
     """Check field approval status for user"""
