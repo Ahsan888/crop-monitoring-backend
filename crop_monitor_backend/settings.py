@@ -133,7 +133,7 @@ AUTH_USER_MODEL = "monitor.User"
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://crop-monitoring-latest.vercel.app",
-    "https://crop-monitoring-latest-mvm4jf7e1-amsuper870-7505s-projects.vercel.app",
+    "https://crop-monitoring-latest-x0e93heyk-amsuper870-7505s-projects.vercel.app",
     "https://*.vercel.app",  # Allow all Vercel domains
 ]
 
